@@ -1,27 +1,9 @@
-import pandas as pd
+
 from xlrd import open_workbook
 
 class EXCELLibray(object):
 
-    def read_excel_data(self, filename, FLAG):
-        df = pd.read_excel(filename)
-        json_request= {}
-        header = ''
-        url = ''
-        data =[]
-        for i in df.index:
-            if df['executionFlag'][i] == FLAG:
-                header = df['Header'][i]
-                url = df['URL'][i]
-                json_request.update({"header":header,"url":url,"firstName":df['firstName'][i],"lastName":df['lastName'][i]})
-                data.append(json_request)
-
-        print header
-        print url
-        print json_request
-        print data
-        return data
-
+    
     def Datareader(self, file_name,  FLAG):
         filter_list =[]
         book = open_workbook(file_name)

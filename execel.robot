@@ -1,6 +1,5 @@
 *** Settings ***
-Library    ../../libs/apis/CSVLibrary.py
-Library    ../../libs/apis/EXCELLibray.py
+Library    EXCELLibray.py
 Library    RequestsLibrary
 
 *** Test Cases ***
