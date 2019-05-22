@@ -53,3 +53,4 @@ class EXCELLibray(object):
 if __name__ == '__main__':
     x = EXCELLibray()
     x.Datareader('sample.xlsx', 'Y')
+	x.put_values_in_json_with_json_file('sample.json', {"email":"email2"})
