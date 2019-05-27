@@ -48,9 +48,22 @@ class EXCELLibray(object):
         print (json.dumps(json_res))
         return json.dumps(json_res)
 
+    def put_values_in_json_without_data_json_file(self, file_name, index):
+        json_res=''
+        try:
+            json_res = json.loads(open(file_name).read())
+        except:
+            print ("file does not exist")
+        for json_key ,json_value in json_res.items():
+            for excel_key,excel_value in index.items():
+                if excel_key == json_value:
+                    json_res[json_key] = excel_value
+        print (json.dumps(json_res))
+        return json.dumps(json_res)
+
 
 
 if __name__ == '__main__':
     x = EXCELLibray()
     x.Datareader('sample.xlsx', 'Y')
-    x.put_values_in_json_with_json_file('sample.json', {"email":"email2"})
+    x.put_values_in_json_with_json_file('sample_with_data.json', {"email":"email2"})

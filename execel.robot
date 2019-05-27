@@ -8,5 +8,5 @@ API Demo Post Request
    log  ${all_values}
    :FOR   ${INDEX}  IN   @{all_values}
    \  LOG  ${INDEX}
-   \  ${json_request}=  put values in json with json file  sample.json  ${INDEX}
+   \  ${json_request}=  put values in json without data json file  sample_without_data.json  ${INDEX}
    \  log  ${json_request}
