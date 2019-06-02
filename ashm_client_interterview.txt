@@ -1,0 +1,182 @@
+
+
+==========================
+Indroduce yourself?
+Include your total experience
+Include all your experience including java and selenium, SOUP UI
+Include your current work, robot and API testing and possibly excel handling and json processing.
+Include Test case management using ALM
+
+===============================================
+what is robot framework?
+
+The Robot Framework is a generic test automation framework for acceptance testing and acceptance test-driven development (ATDD). 
+It is a keyword-driven testing framework that uses tabular test data syntax.
+
+Benfit of Robot framework.
+1.Non technical person who does not have experience with programming language can contribute and learn automation, also can learn python on the go
+2.cool and easy to learn
+3.quick and fast implementation
+4.Can Focus on functional test coverage than learning oops concepts which is very much required for selenium
+5.complete documentation reference for
+
+
+==================================================
+What is acceptance testing?
+acceptance testing is a test conducted to determine if the requirements of a specification or contract are met.
+Acceptance testing is also known as user acceptance testing (UAT), end-user testing, operational acceptance testing (OAT) or field (acceptance) testing. 
+Acceptance criteria is the criteria that a system or component must satisfy in order to be accepted by a user, customer, or other authorized entity
+
+===========================================
+what is jenkins?
+Jenkins is an open source automation tool written in Java with plugins built for Continuous Integration purpose. 
+Jenkins is used to build and test your software projects continuously making it easier for developers to integrate changes to the project, and making it easier for users to obtain a fresh build. 
+It also allows you to continuously deliver your software by integrating with a large number of testing and deployment technologies.
+
+We can integrate jenkins with different tools like
+git--------------version control
+maven-----------build
+puppet--------------configration management
+Ansible-----------------Continuous Deployment
+Selenium------------------Continuous Testing
+Nagios -----------Monitoring
+
+
+========================================
+How did you intgegrated robot testing in jenkins and what was benefit?
+Actually ,Initially we were running our testing manualy once new build is deployed. So to overcome this situation and avoid this manual task .We have integratted our tests in jekins pipeline.
+We have create one job like "Robot Test" and added it to jenkins pipeline. So complete pipeline looks like this.
+
+Build -->Verify ------>Deploy------->Robot Test
+
+In build job we are compiling our code.
+In Verify job we are scan code with sonar qube
+In Deploy job we are deploying our project
+In Robot Test job we are running our Robot test.
+
+So once developer check in their code all the job executed automatically and there is no manual task involved.
+
+
+===============================================================
+What is Continuous Integration (CI)?
+Continuous Integration is a development practice in which the developers are required to commit changes to the source code in a shared repository several times a day or more frequently. 
+Every commit made in the repository is then built. This allows the teams to detect the problems early. Apart from this, depending on the Continuous Integration tool, there are several other functions like deploying the build application on the test server, providing the concerned teams with the build and test results etc.
+
+==================================================
+What is CD?
+Continuous delivery (CD or CDE) is a software engineering approach in which teams produce software in short cycles, ensuring that the software can be reliably released at any time and, when releasing the software, doing so manually.
+ It aims at building, testing, and releasing software with greater speed and frequency.
+ The approach helps reduce the cost, time, and risk of delivering changes by allowing for more incremental updates to applications in production. A straightforward and repeatable deployment process is important for continuous delivery.
+
+
+ 
+ What is agile methodology?	
+ AGILE methodology is a practice that promotes continuous iteration of development and testing throughout the software development lifecycle of the project.
+ Both development and testing activities are concurrent unlike the Waterfall model
+ 
+ 
+ ===========================================
+what jira?
+JIRA is a tool developed by Australian Company Atlassian.
+It is used for bug tracking, issue tracking, and project management. 
+We track User story in the jira.
+
+
+===================================================
+What is STLC?
+Requirement Analysis-->Test Planning:--->Test Case Development:--->Test Environment Setup:-------->Test Execution:----->Test Cycle Closure:
+
+
+==============================================================
+What are types of testing?
+Black box
+white box
+Integration Testing
+
+
+
+
+=================================================
+What is regression testing?
+Regression testing is re-running functional and non-functional tests to ensure that previously developed and tested software still performs after a change. 
+If not, that would be called a regression
+
+
+
+=====================================================================
+What is API?
+In computer programming, an application programming interface is a set of subroutine definitions, communication protocols, and tools for building software. In general terms,
+it is a set of clearly defined methods of communication among various components
+
+
+
+=================================================================================
+What is SOUP UI?
+SoapUI is an open-source web service testing application for service-oriented architectures and representational state transfers. 
+Its functionality covers web service inspection, invoking, development, simulation and mocking, functional testing, load and compliance testing.
+
+
+
+======================================================================
+What is selenium?
+Selenium is a portable framework for testing web applications. Selenium provides a playback tool for authoring functional tests without the need to learn a test scripting language
+
+
+
+
+
+
+==============================================================================
+What is SOUP and REST API?
+
+Web services are of two kinds: Simple Object Access Protocol (SOAP) and Representational State Transfer (REST). 
+SOAP defines a standard communication protocol (set of rules) specification for XML-based message exchange. 
+SOAP uses different transport protocols, such as HTTP and SMTP.
+
+SOAP defines a standard communication protocol (set of rules) specification for XML-based message exchange. 
+SOAP uses different transport protocols, such as HTTP and SMTP. 
+The standard protocol HTTP makes it easier for SOAP model to tunnel across firewalls and proxies without any modifications to the SOAP protocol.
+SOAP can sometimes be slower than middleware technologies like CORBA or ICE due to its verbose XML format.
+
+
+REST describes a set of architectural principles by which data can be transmitted over a standardized interface (such as HTTP).
+ REST does not contain an additional messaging layer and focuses on design rules for creating stateless services.
+ A client can access the resource using the unique URI and a representation of the resource is returned.
+ With each new resource representation, the client is said to transfer state. While accessing RESTful resources with HTTP protocol, 
+the URL of the resource serves as the resource identifier and GET, PUT, DELETE, POST and HEAD are the standard HTTP operations to be performed on that resource.
+
+
+
+======================================================================
+How do you manage Defects?
+
+open-->ready-->fixed--->close or re-open
+
+
+
+======================
+What is test case?
+A test case is a specification of the inputs, execution conditions, testing procedure,
+ and expected results that define a single test to be executed to achieve a particular software testing objective,
+ such as to exercise a particular program path or to verify compliance with a specific requirement
+
+ 
+ ================================================
+What are the different methods  and status  code are available in API?
+GET
+POST
+PUT
+PATCH
+DELETE
+
+200---------------ok
+400----------------bad request
+403-------------forbidden
+401--------------Access denied
+500------------Internal Server Error
+503----------Service Unavailale
+
+
+
+
+
