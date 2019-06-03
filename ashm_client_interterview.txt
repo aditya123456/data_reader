@@ -7,6 +7,32 @@ Include all your experience including java and selenium, SOUP UI
 Include your current work, robot and API testing and possibly excel handling and json processing.
 Include Test case management using ALM
 
+
+what is SEPA?
+The single euro payment area (SEPA) is a payments system created by the European Union (EU) which harmonizes the way cashless payments transact between euro countries. 
+European consumers, businesses, and government agents who make payments by direct debit, credit card or through credit transfers use the SEPA architecture. 
+The single euro payment area is approved and regulated by European Commission.
+
+What is swift?
+SWIFT is a vast messaging network used by banks and other financial institutions to quickly, accurately, and securely send and receive information, such as money transfer instructions.
+SWIFT assigns each financial organization a unique code that has either eight characters or 11 characters. The code is interchangeably called the bank identifier code (BIC), SWIFT code, SWIFT ID, or ISO 9362 code. To understand how the code is assigned, let’s look at Italian bank UniCredit Banca, headquartered in Milan.
+It has the 8-character SWIFT code UNCRITMM.
+
+Example:Assume a customer of a Bank of America branch in New York wants to send money to his friend who banks at the UniCredit Banca branch in Venice.
+ The New York customer can walk into his Bank of America branch with his friend’s account number and UnicaCredit Banca’s unique SWIFT code for its Venice branch. 
+ Bank of America will send a payment transfer SWIFT message to the UniCredit Banca branch over the secure SWIFT network. 
+Once Unicredit Banca receives the SWIFT message about the incoming payment, it will clear and credit the money to the Italian friend’s account.
+
+
+what is retail banking?
+Retail banking, also known as consumer banking, is the typical mass-market banking in which individual customers use local branches of larger commercial banks. 
+Services offered include savings and checking accounts, mortgages, personal loans, debit/credit cards and certificates of deposit (CDs).
+ In retail banking, the focus is on the individual consumer.
+
+
+
+
+
 ===============================================
 what is robot framework?
 
