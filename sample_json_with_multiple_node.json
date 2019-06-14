@@ -1,0 +1,22 @@
+{
+
+    "node1":{
+    "first_name":"firstName",
+    "last_name":"lastName"
+    },
+
+    "node2":{
+    "city":"city",
+    "state":"state"
+    },
+
+    "node3":{
+    "country":"country",
+    "others":"others"
+    },
+
+    "node4":{
+    "intvalue1":"intvalue1",
+    "invalue2":"intvalue2"
+    }
+}

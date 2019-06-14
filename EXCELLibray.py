@@ -26,38 +26,30 @@ class EXCELLibray(object):
         # print dict_list
         return filter_list
 
-
-    def put_values_in_json_with_json_file(self, file_name, index):
-        json_res=''
-        try:
-            json_res = json.loads(open(file_name).read())
-        except:
-            print ("file does not exist")
-        data = json_res['data']
-        try:
-            for i in data:
-                for json_key ,json_value in i.items():
-                    try:
-                        for excel_key,excel_value in index.items():
-                            if excel_key == json_value:
-                                i[json_key] = excel_value
-                    except:
-                        pass
-        except:
-            pass
-        print (json.dumps(json_res))
-        return json.dumps(json_res)
-
     def put_values_in_json_without_data_json_file(self, file_name, index):
         json_res=''
         try:
             json_res = json.loads(open(file_name).read())
         except:
             print ("file does not exist")
-        for json_key ,json_value in json_res.items():
-            for excel_key,excel_value in index.items():
-                if excel_key == json_value:
-                    json_res[json_key] = excel_value
+
+        def json_recursive_update(json_res):
+            json_res = json_res
+            if type(json_res) is dict:
+                for json_key ,json_value in json_res.items():
+                    if type(json_value) is dict:
+                        json_recursive_update(json_value)
+                    elif type(json_value) is list:
+                        for i in json_value:
+                            json_recursive_update(i)
+                    else:
+                        for excel_key,excel_value in index.items():
+                            if excel_key == json_value:
+                                json_res[json_key] = excel_value
+            elif(type(json_res) is list):
+                 for i in json_res:
+                     json_recursive_update(i)
+        json_recursive_update(json_res)
         print (json.dumps(json_res))
         return json.dumps(json_res)
 
@@ -65,5 +57,5 @@ class EXCELLibray(object):
 
 if __name__ == '__main__':
     x = EXCELLibray()
-    x.Datareader('sample.xlsx', 'Y')
-    x.put_values_in_json_with_json_file('sample_with_data.json', {"email":"email2"})
+    # x.Datareader('sample.xlsx', 'Y')
+    x.put_values_in_json_without_data_json_file('sample_json_with_multiple_node.json', {"firstName":"aditya", "city":"Pune","intvalue1":3})
