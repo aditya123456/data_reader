@@ -45,7 +45,10 @@ class EXCELLibray(object):
                     else:
                         for excel_key,excel_value in index.items():
                             if excel_key == json_value:
-                                json_res[json_key] = excel_value
+                                if type(excel_value) is float:
+                                    json_res[json_key] = int(excel_value)
+                                else:
+                                    json_res[json_key] = str(excel_value)
             elif(type(json_res) is list):
                  for i in json_res:
                      json_recursive_update(i)
