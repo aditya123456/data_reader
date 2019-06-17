@@ -10,7 +10,7 @@ class EXCELLibray(object):
 
         # read header values into the list
         keys = [sheet.cell(0, col_index).value for col_index in range(sheet.ncols)]
-        print keys
+        print (keys)
 
         dict_list = []
         for row_index in range(1, sheet.nrows):
