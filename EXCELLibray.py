@@ -47,6 +47,8 @@ class EXCELLibray(object):
                             if excel_key == json_value:
                                 if type(excel_value) is float:
                                     json_res[json_key] = int(excel_value)
+                                elif(excel_value in ['True', 'False', 'TRUE', 'FALSE']):
+                                    json_res[json_key] = bool(excel_value)
                                 else:
                                     json_res[json_key] = str(excel_value)
             elif(type(json_res) is list):

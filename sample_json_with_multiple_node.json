@@ -15,8 +15,12 @@
     "others":"others"
     },
 
-    "node4":{
-    "intvalue1":"intvalue1",
-    "invalue2":"intvalue2"
+    "node4": {
+        "intvalue1": "intvalue1",
+        "invalue2": "intvalue2"
+    },
+     "node5":{
+    "boolvalue1":"boolvalue1",
+    "boolvalue2":"boolvalue2"
     }
 }
