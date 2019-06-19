@@ -22,8 +22,17 @@ class EXCELLibray(object):
             if i['executionFlag'] == FLAG:
                 filter_list.append(i)
         print ("after flag")
+        # print (filter_list)
+        header_dict = {}
+        for i in filter_list:
+            for key, value in i.items():
+                if key.startswith('Header_'):
+                    if type(value) is float:
+                        header_dict.update({key: int(value)})
+                    else:
+                        header_dict.update({key: str(value)})
+                    i['Header'] = header_dict
         print (filter_list)
-        # print dict_list
         return filter_list
 
     def put_values_in_json_without_data_json_file(self, file_name, index):
@@ -62,5 +71,5 @@ class EXCELLibray(object):
 
 if __name__ == '__main__':
     x = EXCELLibray()
-    # x.Datareader('sample.xlsx', 'Y')
+    x.Datareader('sample.xlsx', 'Y')
     x.put_values_in_json_without_data_json_file('sample_json_with_multiple_node.json', {"firstName":"aditya", "city":"Pune","intvalue1":3})
