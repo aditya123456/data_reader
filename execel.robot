@@ -8,5 +8,6 @@ API Demo Post Request
    log  ${all_values}
    :FOR   ${INDEX}  IN   @{all_values}
    \  LOG  ${INDEX}
+   \  log  ${INDEX}[Header]
    \  ${json_request}=  put values in json without data json file  sample_json_with_multiple_node.json  ${INDEX}
    \  log  ${json_request}
