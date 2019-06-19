@@ -28,12 +28,16 @@ class EXCELLibray(object):
             for key, value in i.items():
                 if key.startswith('Header_'):
                     if type(value) is float:
-                        header_dict.update({key: int(value)})
+                        header_dict.update({key.split('_')[1]: int(value)})
                     else:
-                        header_dict.update({key: str(value)})
+                        header_dict.update({key.split('_')[1]: str(value)})
                     i['Header'] = header_dict
         print (filter_list)
         return filter_list
+
+    def generate_header(self, header):
+        print (json.dumps(header))
+        return json.dumps(header)
 
     def put_values_in_json_without_data_json_file(self, file_name, index):
         json_res=''
