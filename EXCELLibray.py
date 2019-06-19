@@ -29,6 +29,8 @@ class EXCELLibray(object):
                 if key.startswith('Header_'):
                     if type(value) is float:
                         header_dict.update({key.split('_')[1]: int(value)})
+                    elif not value:
+                        header_dict.update({})
                     else:
                         header_dict.update({key.split('_')[1]: str(value)})
                     i['Header'] = header_dict
