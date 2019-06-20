@@ -23,8 +23,8 @@ class EXCELLibray(object):
                 filter_list.append(i)
         print ("after flag")
         # print (filter_list)
-        header_dict = {}
         for i in filter_list:
+            header_dict = {}
             for key, value in i.items():
                 if key.startswith('Header_'):
                     if type(value) is float:
