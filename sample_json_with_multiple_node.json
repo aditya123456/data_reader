@@ -22,5 +22,8 @@
      "node5":{
     "boolvalue1":"boolvalue1",
     "boolvalue2":"boolvalue2"
+    },
+    "node7":{
+    "executionDate":"executionDate"
     }
 }

@@ -1,6 +1,6 @@
 from xlrd import open_workbook
 import json
-
+import datetime
 class EXCELLibray(object):
 
     def Datareader(self, file_name,  FLAG):
@@ -34,6 +34,20 @@ class EXCELLibray(object):
                     else:
                         header_dict.update({key.split('_')[1]: str(value)})
                     i['Header'] = header_dict
+
+        # set  execution date
+        for i in filter_list:
+            for key, value in i.items():
+                if key == 'executionDate':
+                    datestring = value.split(',')
+                    today = datetime.date.today()
+                    if datestring[0] == 'currentdate':
+                        i[key] = (today).strftime("%d/%m/%y")
+                    elif datestring[0] == 'pastdate':
+                        i[key] = (today - datetime.timedelta(days=int(datestring[1]))).strftime("%d/%m/%y")
+                    elif datestring[0] == 'futuredate':
+                        i[key] = (today + datetime.timedelta(days=int(datestring[1]))).strftime("%d/%m/%y")
+
         print (filter_list)
         return filter_list
 
@@ -80,4 +94,4 @@ class EXCELLibray(object):
 if __name__ == '__main__':
     x = EXCELLibray()
     x.Datareader('sample.xlsx', 'Y')
-    x.put_values_in_json_without_data_json_file('sample_json_with_multiple_node.json', {"firstName":"aditya", "city":"Pune","intvalue1":3})
+    # x.put_values_in_json_without_data_json_file('sample_json_with_multiple_node.json', {"firstName":"aditya", "city":"Pune","intvalue1":3})
